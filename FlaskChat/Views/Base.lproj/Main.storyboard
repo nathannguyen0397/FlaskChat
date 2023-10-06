@@ -69,8 +69,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="bdD-Tp-3NW"/>
                     <connections>
-                        <outlet property="buttonLogin" destination="KcP-wd-sSH" id="cPv-zz-lHh"/>
-                        <outlet property="buttonRegister" destination="69e-iZ-23p" id="exb-8b-nT8"/>
+                        <outlet property="loginButton" destination="KcP-wd-sSH" id="cPv-zz-lHh"/>
+                        <outlet property="registerButton" destination="69e-iZ-23p" id="exb-8b-nT8"/>
+                        <outlet property="titleLabel" destination="u6G-Pu-aGf" id="2Yd-Ob-72i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

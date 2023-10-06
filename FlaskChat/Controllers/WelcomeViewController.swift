@@ -12,17 +12,28 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var buttonLogin: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var buttonRegister: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpView()
     }
     
     func setUpView(){
-        buttonLogin.layer.cornerRadius = 25.0
-        buttonRegister.layer.cornerRadius = 25.0
+        loginButton.layer.cornerRadius = 25.0
+        registerButton.layer.cornerRadius = 25.0
+        
+        //Logo Animation
+        titleLabel.text = ""
+        let titleText = "⚡️FlashChat"
+        var indexChar = 0.0
+        for letter in titleText{
+            Timer.scheduledTimer(withTimeInterval: 0.15 * indexChar, repeats: false) { _ in
+                self.titleLabel.text?.append(letter)
+            }
+            indexChar += 1
+        }
     }
 }
