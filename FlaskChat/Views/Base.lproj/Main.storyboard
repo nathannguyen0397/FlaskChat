@@ -92,11 +92,12 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-kq-wnr">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tmM-Qv-Z3I">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tmM-Qv-Z3I">
                                         <rect key="frame" x="25" y="50" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="J8u-8T-jiy"/>
                                         </constraints>
+                                        <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -118,13 +119,14 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Ffk-rN-f7x">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvk-s7-Qz0">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvk-s7-Qz0">
                                         <rect key="frame" x="25" y="50" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="q9t-Ak-0Jr"/>
                                         </constraints>
+                                        <color key="textColor" name="BrandBlue"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -148,6 +150,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" name="BrandBlue"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerPressed:" destination="736-dv-DFH" eventType="touchUpInside" id="f3X-ye-DR9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="04Q-qn-Lu0"/>
@@ -166,6 +171,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="KkZ-Vj-vL1"/>
                     <connections>
+                        <outlet property="emailTextField" destination="tmM-Qv-Z3I" id="M4z-3m-qBO"/>
+                        <outlet property="paswordTextField" destination="tvk-s7-Qz0" id="xX4-me-Qdy"/>
+                        <outlet property="registerButton" destination="u0v-mf-gUZ" id="85m-L3-UHu"/>
                         <segue destination="lDT-cM-pqY" kind="show" identifier="RegisterToChat" id="JVU-3W-Xdo"/>
                     </connections>
                 </viewController>
@@ -187,11 +195,12 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Sig-5m-2wY">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xka-FA-Qyr">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@2.com" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xka-FA-Qyr">
                                         <rect key="frame" x="25" y="50" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Fay-Xz-myR"/>
                                         </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -213,13 +222,14 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-lg-eTz">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-1K-OCa">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-1K-OCa">
                                         <rect key="frame" x="25" y="50" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="xCV-dO-lYT"/>
                                         </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -243,6 +253,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" name="BrandLightBlue"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="YEZ-aP-lpJ" eventType="touchUpInside" id="4gM-vl-7kF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fPW-yq-Cma"/>
@@ -261,6 +274,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="VS0-wo-dA7"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Xka-FA-Qyr" id="oWN-tc-px3"/>
+                        <outlet property="passwordTextField" destination="G8f-1K-OCa" id="a4m-cW-wSs"/>
                         <segue destination="lDT-cM-pqY" kind="show" identifier="LoginToChat" id="nt6-cd-iji"/>
                     </connections>
                 </viewController>
@@ -268,30 +283,20 @@
             </objects>
             <point key="canvasLocation" x="1324.4274809160304" y="-560.56338028169012"/>
         </scene>
-        <!--Title-->
+        <!--Chat View Controller-->
         <scene sceneID="0KW-VW-lDu">
             <objects>
-                <viewController id="lDT-cM-pqY" sceneMemberID="viewController">
+                <viewController id="lDT-cM-pqY" customClass="ChatViewController" customModule="FlaskChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2bh-HM-wGJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B4T-VQ-cH0">
-                                <rect key="frame" x="0.0" y="103" width="393" height="655"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="B4T-VQ-cH0">
+                                <rect key="frame" x="0.0" y="103" width="393" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResuableCell" id="svJ-PU-6aT" userLabel="Table View Cell Reusable">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="svJ-PU-6aT" id="a9J-TT-vhJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-YZ-k0o">
-                                <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                                <rect key="frame" x="0.0" y="748" width="393" height="70"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-Lm-7MR" userLabel="Text Field Message">
                                         <rect key="frame" x="20" y="20" width="293" height="40"/>
@@ -312,21 +317,26 @@
                                         <state key="normal" image="paperplane.fill" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="lDT-cM-pqY" eventType="touchUpInside" id="VwZ-0c-XuY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tSn-WH-c7e" secondAttribute="trailing" constant="20" id="2Em-zI-HUT"/>
                                     <constraint firstItem="tSn-WH-c7e" firstAttribute="top" secondItem="6mv-YZ-k0o" secondAttribute="top" constant="20" id="2ho-qz-Cr4"/>
                                     <constraint firstItem="EPp-Lm-7MR" firstAttribute="leading" secondItem="6mv-YZ-k0o" secondAttribute="leading" constant="20" id="G5c-YP-sHg"/>
-                                    <constraint firstAttribute="height" constant="60" id="OhN-Pe-wzb"/>
+                                    <constraint firstAttribute="height" constant="70" id="OhN-Pe-wzb"/>
                                     <constraint firstItem="EPp-Lm-7MR" firstAttribute="top" secondItem="6mv-YZ-k0o" secondAttribute="top" constant="20" id="UlT-23-nc5"/>
                                     <constraint firstItem="tSn-WH-c7e" firstAttribute="leading" secondItem="EPp-Lm-7MR" secondAttribute="trailing" constant="20" id="tn6-oi-EQt"/>
-                                    <constraint firstAttribute="bottom" secondItem="EPp-Lm-7MR" secondAttribute="bottom" id="uJx-KW-vdw"/>
+                                    <constraint firstAttribute="bottom" secondItem="EPp-Lm-7MR" secondAttribute="bottom" constant="10" id="uJx-KW-vdw"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mqf-lR-VqL"/>
                         <color key="backgroundColor" name="BrandPurple"/>
+                        <color key="tintColor" name="BrandBlue"/>
                         <constraints>
                             <constraint firstItem="mqf-lR-VqL" firstAttribute="trailing" secondItem="6mv-YZ-k0o" secondAttribute="trailing" id="5Dd-wW-eSX"/>
                             <constraint firstItem="B4T-VQ-cH0" firstAttribute="leading" secondItem="mqf-lR-VqL" secondAttribute="leading" id="Jly-SL-c4R"/>
@@ -334,10 +344,21 @@
                             <constraint firstItem="B4T-VQ-cH0" firstAttribute="top" secondItem="mqf-lR-VqL" secondAttribute="top" id="a8r-91-GCW"/>
                             <constraint firstItem="6mv-YZ-k0o" firstAttribute="top" secondItem="B4T-VQ-cH0" secondAttribute="bottom" id="dB6-Iq-cTK"/>
                             <constraint firstItem="mqf-lR-VqL" firstAttribute="trailing" secondItem="B4T-VQ-cH0" secondAttribute="trailing" id="pWt-Eo-w70"/>
-                            <constraint firstItem="mqf-lR-VqL" firstAttribute="bottom" secondItem="6mv-YZ-k0o" secondAttribute="bottom" id="zTC-fu-bfG"/>
+                            <constraint firstAttribute="bottom" secondItem="6mv-YZ-k0o" secondAttribute="bottom" constant="34" id="zTC-fu-bfG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Mod-ey-NRl" userLabel="Navigation Item"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Mod-ey-NRl" userLabel="Navigation Item">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="3oK-dN-Y4x">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logOutPress:" destination="lDT-cM-pqY" id="avJ-lJ-X6s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTextfield" destination="EPp-Lm-7MR" id="dfa-1T-ADK"/>
+                        <outlet property="tableView" destination="B4T-VQ-cH0" id="H4f-kW-6dg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFl-YS-Ztg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
